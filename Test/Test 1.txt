@@ -1,0 +1,22 @@
+1. What is HTML?
+A. HTML stands for hypertext markup language it is used to create the structure of the webpage
+   A simple HTML Structure will be
+   <html>
+   <head>
+   <title>HTML</title>
+   </head>
+   <body>
+   <h1>Structure</h1>
+   </body>
+   </html>
+
+2. What are the main features of HTML?
+A. The main features of HTML are
+	a)Easy to learn
+	b)Platform independent 
+	c)Easy to implement
+
+3. What are HTML tags?
+A. HTML tags are the code blocks that help us create the structure of a webpage
+   some of the tags include <html>,<body>,<<h1>to<h6>,<br>,etc
+   these tag helps the browser to understand the layout and structure of the webpage
