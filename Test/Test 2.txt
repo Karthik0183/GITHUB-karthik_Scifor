@@ -1,0 +1,55 @@
+1. What is CSS and why do we use it in web development?
+A. CSS is cascading style sheets it is used for styling the HTML document and giving it a visual appeal 
+   It helps us separate the HTML and Styling so that the code looks clean and we can change things easily
+   It can change the fonts,colors,alignement,backgrounds etc.
+
+2. Explain the difference between inline, internal, and external CSS with examples.
+A. The difference of inline,internal and external CSS is in the way it is implemented in the HTML document.
+   In inline css the styling is applied right in the line we want to effect, for eg: <p style="color:red">The text needs to be red here</p>
+   and the css only effects in that line leaving other p tags without red 
+   In internal css it effects the entire HTML document and it is implemented inside the head tag with the style tag
+   for eg:
+   <head>
+   <style>
+   h1{color:blue;
+    font-size:22px;}
+   </style>
+   </head>
+   here every h1 element in the document will have the styles applied to it
+  In external css the styling is implemented in a different .css file and is linked in the head using link tag it helps keep both separate and
+  is helpful for large projects, for eg:
+  <head>
+  <link rel="stylesheet" href="styles.css">
+  </head>
+
+3. Define the CSS box model and describe its components.
+A. The css box model is used to create visual boxes in the html,the different components of this models are
+   a)padding:this creates the space between the content and border
+   b)content:the text,image,video displayed in the box
+   c)border:the visual separation of the content from the rest of the html contents
+   d)margin:the space between the page and border
+   for eg:
+   div{
+   width:150px;
+   border:10px solid black;
+   padding:15px;
+   margin:20px;
+   }
+
+4. What is the difference between id and class selectors in CSS?
+A. the id selector is used for styling specific elements in the HTML
+   for eg:
+   #test{
+   font-size:22px;
+   color:lightgrey;
+   }
+
+   <p id="test">This is an id selector</p>
+   the class elements is used for styling all elements with the class attributes
+   for eg:
+   .test1{
+    color:green;
+    background-color:blue;
+    }
+
+   <p class="test1">This is a class selector</p>
