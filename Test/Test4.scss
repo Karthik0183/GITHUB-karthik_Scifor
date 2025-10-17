@@ -1,0 +1,13 @@
+.light-theme{
+    $text-color:black;
+    $bg-color:aqua;
+    color: $text-color;
+    background-color: $bg-color;
+}
+
+.dark-theme{
+$text-color:aqua;
+   $bg-color:black;
+   color: $text-color;
+    background-color: $bg-color;
+}
