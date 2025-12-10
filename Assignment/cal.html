@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>
+            calculator
+        </title>
+        <script>
+            function add(a,b){
+                return a+b;
+            }
+            function sub(a,b){
+                return a-b;
+            }
+            function mul(a,b){
+                return a*b;
+            }
+            function div(a,b){
+                return a/b;
+            }
+             
+            var op=prompt("Enter +,-,* or / for operation");
+            switch(op){
+                case '+':
+                   var a=Number(prompt("Enter First Number"));
+            var b=Number(prompt("Enter Second Number"));
+                    document.write("The addition of "+a+" & "+b+" is "+add(a,b));
+                    break;
+                case '-':
+                   var a=Number(prompt("Enter First Number"));
+            var b=Number(prompt("Enter Second Number"));
+                    document.write("The subtraction of "+a+" & "+b+" is "+sub(a,b));
+                    break;
+                case '*':
+                    var a=Number(prompt("Enter First Number"));
+            var b=Number(prompt("Enter Second Number"));
+                    document.write("The multiplication of "+a+" & "+b+" is "+mul(a,b));
+                    break;    
+                case '/':
+                   var a=Number(prompt("Enter First Number"));
+            var b=Number(prompt("Enter Second Number"));
+                    document.write("The division of "+a+" & "+b+" is "+div(a,b));
+                    break; 
+                    default:
+                        document.write("Invaild Input");
+            }
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
