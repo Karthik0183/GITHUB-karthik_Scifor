@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Student Management Dashboard</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+       <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Student Management Dashboard</h1>
+        <div class="container">
+        <form id="Form"><input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="course" placeholder="Course" required>
+            <input type="number" id="mobile" placeholder="Mobile" required>
+            <button type="submit">Add Student</button>
+        </form>
+        <table><thead><tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Course</th>
+            <th>Mobile</th>
+            <th>Actions</th>
+        </tr></thead>
+        <tbody id="studentTable"></tbody>
+    </table></div>
+     <script>
+             const form = document.getElementById('Form');
+        const tableBody = document.getElementById('studentTable');
+
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const course = document.getElementById('course').value;
+            const mobile = document.getElementById('mobile').value;
+
+            // Create new row
+            const row = tableBody.insertRow();
+            row.insertCell(0).textContent = name;
+            row.insertCell(1).textContent = email;
+            row.insertCell(2).textContent = course;
+            row.insertCell(3).textContent = mobile;
+
+            // Actions cell
+            const actionsCell = row.insertCell(4);
+            const editBtn = document.createElement('button');
+            editBtn.textContent = "Edit";
+            editBtn.onclick = function() {
+                document.getElementById('name').value = row.cells[0].textContent;
+                document.getElementById('email').value = row.cells[1].textContent;
+                document.getElementById('course').value = row.cells[2].textContent;
+                document.getElementById('mobile').value = row.cells[3].textContent;
+
+                // Delete the row so we can re-add it
+                tableBody.removeChild(row);
+            }
+
+            const deleteBtn = document.createElement('button');
+            deleteBtn.textContent = "Delete";
+            deleteBtn.onclick = function() {
+                tableBody.removeChild(row);
+            }
+
+            actionsCell.appendChild(editBtn);
+            actionsCell.appendChild(deleteBtn);
+
+            // Clear form
+            form.reset();
+        });
+        </script>
+    </body>
+</html>
