@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Test 15</title>
+        <script>
+            var student={
+                "name":"Alice",
+                "age":22,
+                "isPlaced":true
+            };
+            document.write("Dot Notation:<br>");
+            document.write("Name is "+student.name+"<br>"+"Age is "+
+            student.age+"<br>"+"Student Placed? "+student.isPlaced+"<br><br>");
+             document.write("Bracket Notation:<br>");
+            document.write("Name is "+student["name"]+"<br>"+"Age is "+
+            student["age"]+"<br>"+"Student Placed? "+student["isPlaced"]+"<br><br>");
+
+            var mobile={
+                brand:"Apple",
+                Warranty:"3 years",
+                model:"18"
+            };
+            mobile.brand="Samsung";
+            delete mobile.Warranty;
+            mobile.price="$700";
+            for(var key in mobile){
+                document.write(key+":"+mobile[key]+"<br>");
+            }
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
