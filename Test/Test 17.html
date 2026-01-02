@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Test 17</title>
+        
+    </head>
+    <body>
+        <script>
+        
+        function loaduser(){   fetch("https://jsonplaceholder.typicode.com/users").then(response=>response.json()).then(
+            data=>{const list=document.getElementById("list")
+                data.forEach(user => {
+                    const li=document.createElement("li");
+                    li.textContent=user.name;
+                    list.appendChild(li)
+                    
+                });
+            }
+        )}
+        </script>
+        <button onclick="loaduser()">Load Users</button>
+        <ul id="list"></ul>
+    </body>
+</html> 
