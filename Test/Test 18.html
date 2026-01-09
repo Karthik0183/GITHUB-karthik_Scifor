@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Test 18</title>
+          <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <!-- React DOM -->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Babel for JSX -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="div1"></div>
+        <script type="text/babel">
+            function App(){
+                const [count,setCount]=React.useState(0);
+           
+                return(<div>
+                    <h1>Count:{count}</h1>
+               
+                    <button onClick={(e)=>setCount(count+1)}>Increase</button>
+                    <button onClick={(e)=>{if(count>0){setCount(count-1)}}}>Decrease</button>
+                    </div>
+                )
+            }
+            ReactDOM.createRoot(document.getElementById("div1")).render(<App/>)
+        </script>
+    </body>
+</html>
