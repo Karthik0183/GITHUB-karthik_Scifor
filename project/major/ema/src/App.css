@@ -121,3 +121,39 @@ button:hover{
   flex: 1;
   max-width: 500px;
 }
+
+@media (max-width: 768px) {
+
+  .tran {
+    width: 90%;
+  }
+
+  .student-box {
+    width: 90%;
+  }
+
+  .chart {
+    width: 90%;
+    height: auto;
+  }
+
+  .transaction-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filter {
+    width: 90%;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .transaction-list {
+    width: 100%;
+  }
+
+  .tab {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

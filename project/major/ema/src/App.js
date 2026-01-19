@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import './App.css';
 import { Pie, Bar } from "react-chartjs-2";
